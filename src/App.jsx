@@ -1,19 +1,16 @@
 import "./App.css";
-import {
-  createBrowserRouter,
-  RouterProvider,
-
-  Link,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import CartPage from "./pages/CartPage";
+import Checkout from "./pages/Checkout";
+import ProductDetailPage from "./pages/productDetailPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element:<Home></Home>,
+    element: <Home></Home>,
   },
   {
     path: "/login",
@@ -26,6 +23,14 @@ const router = createBrowserRouter([
   {
     path: "/cart",
     element: <CartPage></CartPage>,
+  },
+  {
+    path: "/checkout",
+    element: <Checkout></Checkout>,
+  },
+  {
+    path: "/product-detail",
+    element: <ProductDetailPage></ProductDetailPage>,
   },
 ]);
 
