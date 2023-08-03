@@ -1,6 +1,7 @@
-import { useState } from "react";
+import {  useState } from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
 import { RadioGroup } from "@headlessui/react";
+
 
 const product = {
   name: "Basic Tee 6-Pack",
@@ -64,6 +65,12 @@ const ProductDetail = () => {
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);
   const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
 
+  // const dispatch = useDispatch();
+  // const { product, status, error } = useSelector((state) => state.products);
+
+  // useEffect(() => {
+  //   dispatch(fetchProductById(productId));
+  // }, [dispatch, productId]);
   return (
     <div className="bg-white">
       <div className="pt-6">
