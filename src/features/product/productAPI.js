@@ -13,6 +13,21 @@ export const fetchProducts = async () => {
   }
 };
 
+export const fetchProductById = async (id) => {
+  try {
+    const response = await fetch(`http://localhost:3000/products/${id}`);
+    if (!response.ok) {
+      throw new Error("Failed to fetch products");
+    }
+    const data = await response.json();
+    
+    return { data };
+  } catch (error) {
+    console.error(error);
+    throw error; // Rethrow the error to propagate it to the calling code
+  }
+};
+
 // export const fetchProducts = () => {
 //   return async (dispatch) => {
 //     try {
